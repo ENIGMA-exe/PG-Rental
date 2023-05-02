@@ -1,9 +1,5 @@
 //home 3
 
-// import DesignTab1 from "../components/Home/DesignTab1";
-// import DesignTab2 from "../components/Home/DesignTab2";
-// import DesignTab3 from "../components/Home/DesignTab3";
-
 import Banner from "../components/Home/Banner";
 import HowItWorks from "../components/Common/HowItWorks";
 import Feedback from '../components/Common/Feedback';
@@ -75,37 +71,11 @@ const Index = () => {
   return (
     <>
 
-      {/* <svg id="svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200" stroke="blue">
-        {/* <path class="line01 line" d="M 10 200  600 200" ></path>
-        <path class="line02 line" d="M 10 400  600 400" ></path>
-        <path class="line03 line" d="M 10 600  600 600" ></path>
-        <path class="line04 line" d="M 10 800  600 800" ></path>
-        <path class="line05 line" d="M 10 1000  600 1000" ></path>
-        
-        <text class="text01" x="30" y="190">2018</text>
-          <text class="text02" x="30" y="390">2019</text>
-          <text class="text03" x="30" y="590">2020</text> 
-
-        <path class="theLine" 
-              d="M -5,0
-                Q 450 230 300 450 
-                T 130 750
-                Q 100 850 300 1000
-                T 150 1200"
-              fill="none" stroke="white" stroke-width="10px" />
-        
-        
-        
-        {/* <circle class="ball ball01" r="20" cx="50" cy="100"></circle> 
-        <circle class="ball ball02" r="20" cx="278" cy="201"></circle>
-        <circle class="ball ball03" r="20" cx="327" cy="401"></circle>
-        <circle class="ball ball04" r="20" cx="203" cy="601"></circle>
-
-      </svg> */}
+      
 
       <Banner />
 
-      <DesignTabHeading 
+      {/* <DesignTabHeading 
         title={'Feel like Home with '}
         span={"Zestos"}
         subtitle="Memories are encoded through repetition"
@@ -114,7 +84,7 @@ const Index = () => {
         animate={MH_1_animation}
         />
 
-         <Gallery/>
+         <Gallery/> */}
 
        <DesignTabHeading 
         title={'The Dwelling Experience with'} span={"Zestos"}

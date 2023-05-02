@@ -9,40 +9,53 @@
 
 
 .designtab-heading{
+    height: 15%;
     margin-top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #6f726f;
-    /* background-image: linear-gradient(to right, #f9f9f9 , white
-    ); */
-
-     background-size: auto auto;
-     /* background-image: url(../public/images/svg/layered-waves-haikei-1.svg); */
+    background-size: auto auto;
     background-repeat: no-repeat;
-    /* background-size: 100%,100%; */
     object-fit: cover;
     background-color: #f6f6f6;
-    /* background-color: #3bbdad; */
+    /* border: 1px solid black; */
 }
 .designtab-heading .myheading{
     font-size: 60px;
+    height: 100%;
     width: 90%;
-    font-family: "Beyond Infinity",sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
-    /* color: white; */
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    /* border: 1px solid black;*/
+}
+.designtab-heading .myheading h1{
+    font-weight: 600;
+    font-size: 60px;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
     /* border: 1px solid black; */
+}
+.designtab-heading .myheading h1 svg{
+    left: 5%;
+    z-index: -1;
+    position: absolute;
 }
 .designtab-heading .myheading span{
     margin-left: 1%;
-    /* padding-left: 1%; */
     color: #25645d;
     /* border: 1px solid black; */
 }
+
 .designtab-heading p{
     max-width: 50%;
     font-size: 20px;

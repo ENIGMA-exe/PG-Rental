@@ -117,6 +117,7 @@ const SingleListings = ({ images }) => {
           </div>
 
           <div className="container">
+
             <div className="row">
               <div className="col-lg-8 col-md-12">
                 <div className="listings-details-desc">
@@ -145,9 +146,8 @@ const SingleListings = ({ images }) => {
                               <img src={path} alt="image" />
                             </div>
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
                   </div>
                 </div>
                 <h3>Dinning Area Images</h3>
@@ -1136,6 +1136,9 @@ const SingleListings = ({ images }) => {
                 </div>
               </div>
             </div>
+
+            </div>
+            
           </div>
         </section>
       }

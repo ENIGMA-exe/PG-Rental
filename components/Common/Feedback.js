@@ -100,7 +100,13 @@ const Feedback = ({ bgColor, bgImage }) => {
       <div className={`feedback-area ${bgImage} ${bgColor} ptb-100`}>
         <div className="container">
           <div className="section-title">
-            <motion.h2 ref={headingRef} animate={headingAnimation}>Users Feedback About Us</motion.h2>
+            <motion.h2 ref={headingRef} animate={headingAnimation}>
+              Users Feedback About Us
+
+              <svg width="350" height="90" viewBox="0 0 160 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L160 11H0V0Z" fill="#FFDC60" />
+              </svg>
+            </motion.h2>
             {/* <motion.p ref={paraRef} animate={paraAnimation}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis

@@ -32,7 +32,6 @@ const Banner = () => {
   const SRanimation = useAnimation();
 
   useEffect(() => {
-    // console.log("banner:-",imgInView)
 
     //heading animation
     if (headingInView) {
@@ -99,151 +98,243 @@ const Banner = () => {
     router.push(`/listing?roomType=${roomTypeValue}&city=${cityValue}`);
   };
 
-  return (
-    <>
-      <section className="banner-area">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-8 col-md-12">
-              <div className="banner-content">
-                <motion.h1
-                  className="banner-two-heading"
-                  ref={headingRef}
-                  animate={Hanimation}
-                >
-                  Find Nearby
-                  <Swiper
-                    className="banner-swiper"
-                    autoplay={{
-                      delay: 1500,
-                      pauseOnMouseEnter: false,
-                    }}
-                    loop={true}
-                    modules={[Autoplay]}
-                  >
-                    <SwiperSlide>
-                      <span className="color-0ec6c6">Pgs</span>
-                    </SwiperSlide>
+  
+  // return (
+  //   <>
+  //     <section className="banner-area">
+  //       <div className="container-fluid">
+  //         <div className="row">
+  //           <div className="col-lg-8 col-md-12">
+  //             <div className="banner-content">
+  //               <motion.h1
+  //                 className="banner-two-heading"
+  //                 ref={headingRef}
+  //                 animate={Hanimation}
+  //               >
+  //                 Find Nearby
+  //                 <Swiper
+  //                   className="banner-swiper"
+  //                   autoplay={{
+  //                     delay: 1500,
+  //                     pauseOnMouseEnter: false,
+  //                   }}
+  //                   loop={true}
+  //                   modules={[Autoplay]}
+  //                 >
+  //                   <SwiperSlide>
+  //                     <span className="color-0ec6c6">Pgs</span>
+  //                   </SwiperSlide>
 
-                    <SwiperSlide>
-                      <span className="color-0ec6c6">Rooms</span>
-                    </SwiperSlide>
+  //                   <SwiperSlide>
+  //                     <span className="color-0ec6c6">Rooms</span>
+  //                   </SwiperSlide>
 
-                    {/* <SwiperSlide>
-                      Find Nearby <span className="color-0ec6c6">Apartments</span>
-                    </SwiperSlide> */}
-                  </Swiper>
-                </motion.h1>
+  //                   {/* <SwiperSlide>
+  //                     Find Nearby <span className="color-0ec6c6">Apartments</span>
+  //                   </SwiperSlide> */}
+  //                 </Swiper>
+  //               </motion.h1>
 
-                {/* <p>Expolore top-rated attractions, activities and more...</p> */}
+  //               {/* <p>Expolore top-rated attractions, activities and more...</p> */}
 
-                <motion.form ref={sref} animate={SRanimation}>
-                  <div className="row m-0 align-items-center">
-                    {/* <div className="col-lg-4 col-md-12 p-0">
-                      <div className="form-group">
-                        <label>
-                          <i className="flaticon-search"></i>
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="What are you looking for?"
-                        />
-                      </div>
-                    </div> */}
+  //               <motion.form ref={sref} animate={SRanimation}>
+  //                 <div className="row m-0 align-items-center">
+                    
+  //                   {/* <div className="col-lg-4 col-md-12 p-0">
+  //                     <div className="form-group">
+  //                       <label>
+  //                         <i className="flaticon-search"></i>
+  //                       </label>
+  //                       <input
+  //                         type="text"
+  //                         className="form-control"
+  //                         placeholder="What are you looking for?"
+  //                       />
+  //                     </div>
+  //                   </div> */}
 
-                    <div className="col-lg-4 col-md-6 p-0">
-                      <div className="form-group">
-                        {/* <label>
-                          <i className="flaticon-pin"></i>
-                        </label> */}
-                        <select
-                          value={cityValue}
-                          onChange={(ele) => {
-                            setCityValue(ele.target.value);
-                          }}
-                          className="banner-form-select-two"
-                        >
-                          <option value="select_city">Select City</option>
-                          {cities.map((ele) => (
-                            <option value={ele.slug} key={ele.id}>
-                              {ele.name}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
+  //                   <div className="col-lg-4 col-md-6 p-0">
+  //                     <div className="form-group">
+  //                       {/* <label>
+  //                         <i className="flaticon-pin"></i>
+  //                       </label> */}
+  //                       <select
+  //                         value={cityValue}
+  //                         onChange={(ele) => {
+  //                           setCityValue(ele.target.value);
+  //                         }}
+  //                         className="banner-form-select-two"
+  //                       >
+  //                         <option value="select_city">Select City</option>
+  //                         {cities.map((ele) => (
+  //                           <option value={ele.slug} key={ele.id}>
+  //                             {ele.name}
+  //                           </option>
+  //                         ))}
+  //                       </select>
+  //                     </div>
+  //                   </div>
 
-                    <div className="col-lg-4 col-md-6 p-0">
-                      <div className="form-group category-select">
-                        {/* <label className="category-icon">
-                          <i className="flaticon-category"></i>
-                        </label> */}
-                        <select
-                          value={roomTypeValue}
-                          onChange={(ele) => {
-                            setRoomTypeValue(ele.target.value);
-                          }}
-                          className="banner-form-select-two"
-                        >
-                          <option value="select_room_type">
-                            Select Room Type
-                          </option>
-                          {roomTypes.map((ele) => (
-                            <option value={ele.slug} key={ele.id}>
-                              {ele.typeOfRoom}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
+  //                   <div className="col-lg-4 col-md-6 p-0">
+  //                     <div className="form-group category-select">
+  //                       {/* <label className="category-icon">
+  //                         <i className="flaticon-category"></i>
+  //                       </label> */}
+  //                       <select
+  //                         value={roomTypeValue}
+  //                         onChange={(ele) => {
+  //                           setRoomTypeValue(ele.target.value);
+  //                         }}
+  //                         className="banner-form-select-two"
+  //                       >
+  //                         <option value="select_room_type">
+  //                           Select Room Type
+  //                         </option>
+  //                         {roomTypes.map((ele) => (
+  //                           <option value={ele.slug} key={ele.id}>
+  //                             {ele.typeOfRoom}
+  //                           </option>
+  //                         ))}
+  //                       </select>
+  //                     </div>
+  //                   </div>
 
-                    <div className="col-lg-4 col-md-12 p-0">
-                      <div className="submit-btn">
-                        <button type="submit" onClick={onSearchHandler}>
-                          Search Now
-                        </button>
-                      </div>
-                    </div>
+  //                   <div className="col-lg-4 col-md-12 p-0">
+  //                     <div className="submit-btn">
+  //                       <button type="submit" onClick={onSearchHandler}>
+  //                         Search Now
+  //                       </button>
+  //                     </div>
+  //                   </div>
+  //                 </div>
+  //               </motion.form>
+
+  //               {/* <ul className='popular-search-list'>
+  //                 <li>Popular:</li>
+  //                 <li>
+  //                   <Link href="/grid-listings-with-map">
+  //                     <a>Pg's</a>
+  //                   </Link>
+  //                 </li>
+  //                 <li>
+  //                   <Link href="/grid-listings-with-map">
+  //                     <a>Hotels</a>
+  //                   </Link>
+  //                 </li>
+  //                 <li>
+  //                   <Link href="/grid-listings-with-map">
+  //                     <a>Apartments</a>
+  //                   </Link>
+  //                 </li>
+  //               </ul> */}
+  //             </div>
+  //           </div>
+
+  //           <div className="col-lg-4 col-md-12">
+  //             <motion.div className="banner-image">
+  //               <motion.img
+  //                 src="/images/banner-img1.png"
+  //                 alt="image"
+  //                 ref={imgRef}
+  //                 animate={IManimation}
+  //               />
+  //             </motion.div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </section>
+  //   </>
+  // );
+
+  return(
+      <div className="banner-area "> 
+         <div className="container">
+            <div className="row">
+
+               <div className="col-xl-6 col-lg-6">
+                  <div className="tp-hero-section-box tp-hero-section-box-four pt-120 pb-140">
+                     <h3 className="tp-hero-bd-title text-black wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".6s">Building Digital
+                        <span className="tp-highlight">
+                           <svg width="266" height="12" viewBox="0 0 266 12" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 0L266 12H0V0Z" fill="#FFDC60" />
+                           </svg>
+                           <i>Product,</i>
+                        </span>
+                        Brand and Experience
+                     </h3>
+
+                     <p className="wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">At collax we specialize in designing, building, shipping and scaling beautiful, usable products with blazing-fast efficiency</p>
+                     
+                     {/*  SearchBox Here */}
+                      <motion.form ref={sref} animate={SRanimation}>
+                        <div className="row m-0 align-items-center">
+                          
+
+                          <div className="col-lg-4 col-md-6 p-0">
+                            <div className="form-group">
+                              <select
+                                value={cityValue}
+                                onChange={(ele) => {
+                                  setCityValue(ele.target.value);
+                                }}
+                                className="banner-form-select-two"
+                              >
+                                <option value="select_city">Select City</option>
+                                {cities.map((ele) => (
+                                  <option value={ele.slug} key={ele.id}>
+                                    {ele.name}
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
+                          </div>
+
+                          <div className="col-lg-4 col-md-6 p-0">
+                            <div className="form-group category-select">
+                              
+                              <select
+                                value={roomTypeValue}
+                                onChange={(ele) => {
+                                  setRoomTypeValue(ele.target.value);
+                                }}
+                                className="banner-form-select-two"
+                              >
+                                <option value="select_room_type">
+                                  Select Room Type
+                                </option>
+                                {roomTypes.map((ele) => (
+                                  <option value={ele.slug} key={ele.id}>
+                                    {ele.typeOfRoom}
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
+                          </div>
+
+                          <div className="col-lg-4 col-md-12 p-0">
+                            <div className="submit-btn">
+                              <button type="submit" onClick={onSearchHandler}>
+                                Search Now
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.form>
+
                   </div>
-                </motion.form>
+               </div>
 
-                {/* <ul className='popular-search-list'>
-                  <li>Popular:</li>
-                  <li>
-                    <Link href="/grid-listings-with-map">
-                      <a>Pg's</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/grid-listings-with-map">
-                      <a>Hotels</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/grid-listings-with-map">
-                      <a>Apartments</a>
-                    </Link>
-                  </li>
-                </ul> */}
-              </div>
-            </div>
+               <div className="col-xl-6 col-lg-6 wow fadeInRight"  data-wow-duration=".7s" data-wow-delay=".9s">
+                  <div className="tp-hero-right-img-four pt-90">
+                     <img src="images/hero/hero-5.png" alt=""/>
+                  </div>
+               </div>
 
-            <div className="col-lg-4 col-md-12">
-              <motion.div className="banner-image">
-                <motion.img
-                  src="/images/banner-img1.png"
-                  alt="image"
-                  ref={imgRef}
-                  animate={IManimation}
-                />
-              </motion.div>
             </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+         </div>
+      </div>
+  )
 };
 
 export default Banner;

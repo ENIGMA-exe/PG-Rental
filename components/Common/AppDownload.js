@@ -63,7 +63,11 @@ const AppDownload = () => {
               <div className='app-download-content'>
 
                 <motion.h2 animate={MH_3_animation} ref={mh_3_ref}>
-                  One Tap Solution For <span id='adas'>Zestos</span>
+                  One Tap Solution For 
+                  <span id='adas'>Zestos</span>
+                  <svg width="350" height="90" viewBox="0 0 160 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L160 11H0V0Z" fill="#FFDC60" />
+                  </svg>
                 </motion.h2>
                 
                 {/* <p>Now available in</p> */}

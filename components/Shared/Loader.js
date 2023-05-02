@@ -3,7 +3,9 @@ const Loader = ({ loading }) => {
     <>
       {loading && (
         <div className="preloader">
-          <div id="cupcake" className="box">
+          <img src="../images/Zestos_logo.svg" alt="Zestos logo"/>
+
+          {/* <div id="cupcake" className="box">
             <span className="letter box">Z</span>
             <span className="letter box">e</span>
             <span className="letter box">s</span>
@@ -15,7 +17,7 @@ const Loader = ({ loading }) => {
               </div>
             </div>
             <span className="letter box">s</span>
-          </div>
+          </div> */}
         </div>
       )}
     </>

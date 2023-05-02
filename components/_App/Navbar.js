@@ -86,7 +86,8 @@ const Navbar = () => {
               <div className="logo">
                 <Link href="/">
                   <a>
-                    <img src="/images/black-logo.png" alt="logo" />
+                    {/* <img src="/images/black-logo.png" alt="logo" /> */}
+                    <img src="/images/zestos_logo.svg" alt="logo" />
                   </a>
                 </Link>
               </div>
@@ -99,258 +100,41 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-md navbar-light">
               <Link href="/">
                 <a className="navbar-brand">
-                  <img src="/images/black-logo.png" alt="logo" />
+                  {/* <img src="/images/black-logo.png" alt="logo" /> */}
+                  <img src="/images/zestos_logo.svg" alt="logo" id="logo"/>
                 </a>
               </Link>
               <div className="collapse navbar-collapse mean-menu">
                 <ul className="navbar-nav">
-                  {/* <li className="nav-item">
-                    <a href="#" className="dropdown-toggle nav-link">
-                      Listings
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <a href="#" className="nav-link">
-                          List Layout <i className="bx bx-chevron-right"></i>
-                        </a>
-                        <ul className="dropdown-menu">
-                          <li className="nav-item">
-                            <Link
-                              href="/vertical-listings-left-sidebar"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Left Sidebar</a>
-                            </Link>
-                          </li>
 
-                          <li className="nav-item">
-                            <Link
-                              href="/vertical-listings-right-sidebar"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Right Sidebar</a>
-                            </Link>
-                          </li>
+                  <li className="nav-item">
+                    <Link href="/" activeClassName="active">
+                      <a className="nav-link">Home</a>
+                    </Link>
+                  </li>
 
-                          <li className="nav-item">
-                            <Link
-                              href="/vertical-listings-full-width"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Full Width</a>
-                            </Link>
-                          </li>
+                  <li className="nav-item">
+                    <Link href="/about" activeClassName="active">
+                      <a className="nav-link">About Us</a>
+                    </Link>
+                  </li>
 
-                          <li className="nav-item">
-                            <Link
-                              href="/vertical-listings-with-map"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Full Width + Map</a>
-                            </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <Link
-                              href="/vertical-listings-full-map"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Full Width + Full Map</a>
-                            </Link>
-                          </li>
-                        </ul> 
-                      </li>
-
-                      <li className="nav-item">
-                        <a href="#" className="nav-link">
-                          Grid Layout <i className="bx bx-chevron-right"></i>
-                        </a>
-                        <ul className="dropdown-menu">
-                          <li className="nav-item">
-                            <Link
-                              href="/grid-listings-with-left-sidebar"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Left Sidebar</a>
-                            </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <Link
-                              href="/grid-listings-with-right-sidebar"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Right Sidebar</a>
-                            </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <Link
-                              href="/grid-listings-full-width"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Full Width</a>
-                            </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <Link
-                              href="/grid-listings-with-map"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Full Width + Map</a>
-                            </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <Link
-                              href="/grid-listings-full-map"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Full Width + Full Map</a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/single-listings" activeClassName="active">
-                          <a className="nav-link">Listings Details</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/destinations" activeClassName="active">
-                          <a className="nav-link">Top Place</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/categories" activeClassName="active">
-                          <a className="nav-link">Categories</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/user-profile" activeClassName="active">
-                          <a className="nav-link">Author Profile</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </li> */}
-
-                  {/* <li className="nav-item">
-                    <a href="#" className="dropdown-toggle nav-link">
-                      Shop
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link href="/shop" activeClassName="active">
-                          <a className="nav-link">Products List</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/cart" activeClassName="active">
-                          <a className="nav-link">Cart</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/checkout" activeClassName="active">
-                          <a className="nav-link">Checkout</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/product-details" activeClassName="active">
-                          <a className="nav-link">Products Details</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </li> */}
-
-                  {/* <li className="nav-item">
-                    <a href="#" className="dropdown-toggle nav-link">
-                      Blog
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link href="/blog-1" activeClassName="active">
-                          <a className="nav-link">Grid (2 in Row)</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/blog-2" activeClassName="active">
-                          <a className="nav-link">Grid (3 in Row)</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/blog-3" activeClassName="active">
-                          <a className="nav-link">Grid (Full Width)</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/blog-4" activeClassName="active">
-                          <a className="nav-link">Right Sidebar</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link href="/blog-5" activeClassName="active">
-                          <a className="nav-link">Left Sidebar</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <a href="#" className="nav-link">
-                          Single Post <i className="bx bx-chevron-right"></i>
-                        </a>
-                        <ul className="dropdown-menu">
-                          <li className="nav-item">
-                            <Link
-                              href="/single-blog-1"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">Default</a>
-                            </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <Link
-                              href="/single-blog-2"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">With Video</a>
-                            </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <Link
-                              href="/single-blog-3"
-                              activeClassName="active"
-                            >
-                              <a className="nav-link">With Image Slider</a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li> */}
+                  <li className="nav-item">
+                    <Link href="/contact" activeClassName="active">
+                      <a className="nav-link">Contact</a>
+                    </Link>
+                  </li>
 
                   <li className="nav-item">
                     <a href="#" className="dropdown-toggle nav-link">
                       Pages
                     </a>
                     <ul className="dropdown-menu">
-                      <li className="nav-item">
+                      {/* <li className="nav-item">
                         <Link href="/about" activeClassName="active">
                           <a className="nav-link">About Us</a>
                         </Link>
-                      </li>
+                      </li> */}
 
                       <li className="nav-item">
                         <Link href="/how-it-works" activeClassName="active">
@@ -416,11 +200,11 @@ const Navbar = () => {
                         </Link>
                       </li>
 
-                      <li className="nav-item">
+                      {/* <li className="nav-item">
                         <Link href="/contact" activeClassName="active">
                           <a className="nav-link">Contact</a>
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
 
@@ -564,6 +348,7 @@ const Navbar = () => {
                     </div>
                   </div>
                 } */}
+
                 <div className="others-option d-flex align-items-center">
                   <div className="option-item">
                     {authContextData?.user &&

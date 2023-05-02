@@ -34,12 +34,21 @@ const HowItWorks = ({bgColor}) => {
       <section className={`how-it-works-area pt-100 pb-70 ${bgColor}`}>
         <div className='container'>
           <div className='section-title'>
-            <motion.h2 ref={headingRef} animate={headingAnimation}>How to become <span>Zestian</span></motion.h2>
+            <motion.h2 ref={headingRef} animate={headingAnimation}>
+              How to become 
+              <span>Zestian</span>
+              
+              <svg width="350" height="90" viewBox="0 0 160 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L160 11H0V0Z" fill="#FFDC60" />
+              </svg>
+            </motion.h2>
+
             {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
               ipsum suspendisse ultrices gravida. Risus commodo viverra.
             </p> */}
+
           </div>
 
           <div className='row justify-content-center'>

@@ -74,16 +74,12 @@ const DashboardListingArea = () => {
 
                       <div className="listings-footer">
                         <div className="d-flex justify-content-between align-items-center">
-                          <Link
-                            href={`/admin/edit-listing/${id}`}
-                            className="default-btn"
-                          >
-                            Edit
-                          </Link>
 
-                          {/* <a href={`/admin/edit-listing/${id}`} className="default-btn">
-                            Edit
-                          </a> */}
+                          <Link href={`/admin/edit-listing/${id}`} className="defaultbtn" id="mandip">
+                            <a className="default-btn">
+                              Edit
+                            </a>
+                          </Link>
 
                           <a href="#" className="default-btn">
                             Delete

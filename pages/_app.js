@@ -19,8 +19,16 @@ import "../styles/designTab2.css";
 import "../styles/designTabHeading.css"
 import "../styles/gallery.css"
 import '../styles/appattachment.css'
-
 import '../styles/foodmenue.css'
+
+//extra css
+import '../styles/custom-animation.css'
+import '../styles/hover-reveal.css'
+import '../styles/magnific-popup.css'
+import '../styles/meanmenu.css'
+import '../styles/slick.css'
+import '../styles/spacing.css'
+import '../styles/animate.css'
 
 import Layout from "../components/_App/Layout";
 import Loader from "../components/Shared/Loader";

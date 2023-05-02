@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import Link from "next/link";
@@ -14,7 +14,7 @@ const SingleListings = ({ images }) => {
     {
       question: "Monday",
       answer:
-        "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.",
+        "xyz,abc",
     },
     {
       question: "Tuesday",
@@ -42,6 +42,37 @@ const SingleListings = ({ images }) => {
       answer: `Chat and email support is available 24/7. Phone lines are open during normal business hours.`,
     },
   ];
+
+  // active btn
+  const [activeBtn,setactiveBtn] = useState({
+    0:true,
+    1:false,
+    2:false,
+    3:false,
+    4:false,
+    5:false,
+    6:false
+  })
+
+  //active image
+  const [activeImg,setActiveImg] = useState({
+      0:true,
+      1:true,
+      2:true,
+      3:true,
+      4:true,
+      5:true,
+  })
+
+  const handleActive = (e)=>{
+    
+    setactiveBtn((ps)=>{
+      var prevState = {...ps}
+      for(var key in prevState) prevState[key] = false;
+      prevState[e.target.id] = true
+      return prevState
+    })
+  }
 
   return (
     <>
@@ -188,122 +219,81 @@ const SingleListings = ({ images }) => {
 
                 <h3>Gallery</h3>
                 <div id="gallery">
-                  <div className="row justify-content-center">
-                    <div className="col-lg-4 col-md-6">
-                      <div className="single-image-bpx">
-                        <img src="/images/gallery/gallery1.jpg" alt="image" />
+                  
+
+                  <div class="row grid">
+
+                    <div class="row justify-content-center mb-40">
+                      <div class="col-11 p-0 text-center">
+                          <div class="tp-project-tab-button tp-radius-button masonary-menu">
+                            {
+                              ["All","Dining","Common Room","Bed Room","Club House","Gym"].map((item,index)=>{
+                                return (
+                                  <button 
+                                    key={item} 
+                                    class={(activeBtn[index])?"active":""} 
+                                    id={(index).toString()}
+                                    onClick={(e)=>{handleActive(e)}}>
+
+                                          {item}
+                                  </button>)
+
+                              })
+                            }
+                          </div>
                       </div>
+                    </div>
+                
+                    <div class="col-xl-8 col-lg-8 col-md-12 grid-item  cat2 cat5 cat4">
+                        <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Branding" data-title="Book art design" data-fx="1">
+                          <div class="tp-project-item-four__img fix">
+                              <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                          </div>
+                        </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6">
-                      <div className="single-image-bpx">
-                        <img src="/images/gallery/gallery2.jpg" alt="image" />
-                      </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
+                        <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Graphic Design" data-fx="1">
+                          <div class="tp-project-item-four__img fix">
+                              <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                          </div>
+                        </div>
+
+                        <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Graphic Design" data-fx="1">
+                          <div class="tp-project-item-four__img fix">
+                              <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                          </div>
+                        </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6">
-                      <div className="single-image-bpx">
-                        <img src="/images/gallery/gallery3.jpg" alt="image" />
-                      </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
+                        <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="3d Digital Art" data-fx="1">
+                          <div class="tp-project-item-four__img fix">
+                              <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                          </div>
+                        </div>
                     </div>
-                  </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
+                        <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Web Design" data-fx="1">
+                          <div class="tp-project-item-four__img fix">
+                              <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
+                        <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Mobile App Design" data-fx="1">
+                          <div class="tp-project-item-four__img fix">
+                              <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                          </div>
+                        </div>
+                    </div>
+
+                  </div> 
                 </div>
 
                 <h3>Food menu</h3>
-                {/* <div class="food-menu">
-                      <div class="week">
-                          <div class="heading">
-                              <span>Days</span>
-                              Mon-Sun
-                          </div>
-                          <p>Day 1</p>
-                          <p>Day 2</p>
-                          <p>Day 3</p>
-                          <p>Day 4</p>
-                          <p>Day 5</p>
-                          <p>Day 6</p>
-                          <p>Day 7</p>
-                      </div>
-
-                      <div class="fdetails">
-                          <div class="fcol">
-                              <div class="heading">
-                                  <span>Breakfast</span>
-                                  07:30-09:30
-                              </div>
-
-                              <div class="items">
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                              </div>
-                          </div>
-
-                          <div class="fcol">
-                              <div class="heading">
-                                  <span>Lunch</span>
-                                  12:30:-14:30
-                              </div>
-
-                              <div class="items">
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                              </div>
-                          </div>
-
-                          <div class="fcol">
-                              <div class="heading">
-                                  <span>Evening Snaks</span>
-                                  16:30-17:30
-                              </div>
-
-                              <div class="items">
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                              </div>
-                          </div>
-
-                          <div class="fcol">
-                              <div class="heading">
-                                  <span>Dinner</span>
-                                  19:30-21:30
-                              </div>
-
-                              <div class="items">
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                                  <div class="item">
-                                      Black Chana Masala
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                </div> */}
-
                 <div className="fcontainer">
                   <div className="component">
                     <div className="illustration">
@@ -947,8 +937,7 @@ const SingleListings = ({ images }) => {
   
                 <div className='listings-widget listings_contact_details'>
                   
-                  
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243646.88005384957!2d78.26795710593576!3d17.412627419334125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1679405651481!5m2!1sen!2sin" referrerpolicy="no-referrer-when-downgrade" style={{"width":"100%","height":"500px"}}
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243646.88005384957!2d78.26795710593576!3d17.412627419334125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1679405651481!5m2!1sen!2sin" referrerPolicy="no-referrer-when-downgrade" style={{"width":"100%","height":"500px"}}
                   ></iframe>
 
                 </div>
