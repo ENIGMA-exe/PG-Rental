@@ -24,48 +24,48 @@ const EventsArea = () => {
 
 
     //heading view point and animation hook
-    const [headingRef,headingInview] = useInView({threshold:0.1})
-    const headingAnimation = useAnimation();
+   //  const [headingRef,headingInview] = useInView({threshold:0.1})
+   //  const headingAnimation = useAnimation();
 
     //img view point and animation hook
-    const [ImgRef,imgInview] = useInView({threshold:0.1})
-    const imgAnimation = useAnimation();
+   //  const [ImgRef,imgInview] = useInView({threshold:0.1})
+   //  const imgAnimation = useAnimation();
 
 
-    useEffect(()=>{
-        if(headingInview){
-            headingAnimation.start({
-            opacity:1,
-            y:'0',
-            transition:{
-                ease: "linear",
-                duration:0.7
-            }
-            })
-        }else{
-            headingAnimation.start({
-            opacity:0,
-            y:'20vh',
-            })
-        }
+   //  useEffect(()=>{
+   //      if(headingInview){
+   //          headingAnimation.start({
+   //          opacity:1,
+   //          y:'0',
+   //          transition:{
+   //              ease: "linear",
+   //              duration:0.7
+   //          }
+   //          })
+   //      }else{
+   //          headingAnimation.start({
+   //          opacity:0,
+   //          y:'20vh',
+   //          })
+   //      }
 
 
-        if(imgInview){
-            imgAnimation.start({
-            opacity:1,
-            x:'0',
-            transition:{
-                ease: "linear",
-                duration:0.7
-            }
-            })
-        }else{
-            imgAnimation.start({
-            opacity:0,
-            x:'-20vw',
-            })
-        }
-    },[headingInview,imgInview])
+   //      if(imgInview){
+   //          imgAnimation.start({
+   //          opacity:1,
+   //          x:'0',
+   //          transition:{
+   //              ease: "linear",
+   //              duration:0.7
+   //          }
+   //          })
+   //      }else{
+   //          imgAnimation.start({
+   //          opacity:0,
+   //          x:'-20vw',
+   //          })
+   //      }
+   //  },[headingInview,imgInview])
 
   return (
     <>
@@ -135,17 +135,23 @@ const EventsArea = () => {
             <div className="row">
             
                <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".5s" data-wow-delay=".5s">
-                  <div className="tp-fea-img">
+                  <motion.div 
+                     className="tp-fea-img"
+                     initial={{opacity:0,x:'-10vw'}}
+                     whileInView={{x:0,opacity:1}}
+                     viewport={{once:false,amount:0.7}}
+                     transition={{staggerChildren:0.9,duration:0.7}}
+                  >
                      <img src="images/hero/fea-1.png" alt=""/>
-                  </div>
+                  </motion.div>
                </div>
 
                <div className="col-xl-6 col-lg-6  wow tpfadeRight"  data-wow-duration=".5s" data-wow-delay=".7s">
                   <div className="tp-fea-right-side">
                      <div className="tp-fea-section-box">
                         <h5 className="tp-subtitle pb-10">Why Choose us</h5>
-                        <h2 className="tp-title-sm pb-30">Specialist in aviding clients
-                           of financial
+                        <h2 className="tp-title-sm pb-30">
+                           Specialist in aviding clients of financial &nbsp;
                            <span className="tp-section-highlight">
                               challenges
                               <svg width="240" height="11" viewBox="0 0 240 11" fill="none"
@@ -156,7 +162,13 @@ const EventsArea = () => {
                         </h2>
                      </div>
                      <div className="fea-wrapper-main">
-                        <div className="tp-feature-list d-flex">
+                        <motion.div 
+                           className="tp-feature-list d-flex"
+                           initial={{opacity:0,y:'10vh'}}
+                           whileInView={{y:0,opacity:1}}
+                           viewport={{once:false,amount:0.9}}
+                           transition={{staggerChildren:0.9,duration:0.9}}
+                        >
                            <div className="tp-feature-list__icon-img fea-color-1 mr-25">
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                  <g clipPath="url(#clip0_496_130)">
@@ -180,8 +192,15 @@ const EventsArea = () => {
                               <h4>Fast working process</h4>
                               <p>At collax we specialize in designing, building, <br/> shipping and scaling beautifu.</p>
                            </div>
-                        </div>
-                        <div className="tp-feature-list  d-flex">
+                        </motion.div>
+
+                        <motion.div 
+                           className="tp-feature-list  d-flex"
+                           initial={{opacity:0,y:'10vh'}}
+                           whileInView={{y:0,opacity:1}}
+                           viewport={{once:false,amount:0.9}}
+                           transition={{staggerChildren:0.9,duration:0.9}}
+                        >
                            <div className="tp-feature-list__icon-img fea-color-2 mr-25">
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <g clipPath="url(#clip0_496_139)">
@@ -199,12 +218,21 @@ const EventsArea = () => {
                                  </defs>
                                  </svg>
                            </div>
+
                            <div className="tp-feature-list__content">
                               <h4>Didicated team</h4>
                               <p>At collax we specialize in designing, building, <br/> shipping and scaling beautifu.</p>
                            </div>
-                        </div>
-                        <div className="tp-feature-list  d-flex">
+
+                        </motion.div>
+
+                        <motion.div 
+                           className="tp-feature-list  d-flex"
+                           initial={{opacity:0,y:'10vh'}}
+                           whileInView={{y:0,opacity:1}}
+                           viewport={{once:false,amount:0.9}}
+                           transition={{staggerChildren:0.9,duration:0.9}}
+                           >
                            <div className="tp-feature-list__icon-img fea-color-3 mr-25">
                               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M15.7423 0.00474192C15.2913 -0.0425081 14.882 0.268281 14.8267 0.716883C14.7707 1.16707 15.0895 1.57646 15.5388 1.63252C16.6523 1.77109 17.7402 2.16534 18.7728 2.60114C19.1949 2.77647 19.6728 2.57872 19.8479 2.16375C20.0233 1.74561 19.8279 1.26491 19.4105 1.0887C18.2385 0.595203 17.004 0.16175 15.7423 0.00474192V0.00474192Z" fill="currentColor"/>
@@ -215,11 +243,13 @@ const EventsArea = () => {
                                  <path d="M4.10156 14C4.10156 19.4282 8.57183 23.8984 14 23.8984C19.4282 23.8984 23.8984 19.4282 23.8984 14C23.8984 8.57183 19.4282 4.10156 14 4.10156C8.57183 4.10156 4.10156 8.57183 4.10156 14ZM14.8203 10.7188C14.8203 10.2653 15.1872 9.89844 15.6406 9.89844C16.094 9.89844 16.4609 10.2653 16.4609 10.7188V13.1797H18.1016V10.7188C18.1016 10.2653 18.4685 9.89844 18.9219 9.89844C19.3753 9.89844 19.7422 10.2653 19.7422 10.7188V17.2812C19.7422 17.7347 19.3753 18.1016 18.9219 18.1016C18.4685 18.1016 18.1016 17.7347 18.1016 17.2812V14.8203H15.6406C15.1872 14.8203 14.8203 14.4534 14.8203 14V10.7188ZM10.7188 11.5391C10.2662 11.5391 9.89844 11.9068 9.89844 12.3594C9.89844 12.8128 9.53154 13.1797 9.07812 13.1797C8.62471 13.1797 8.25781 12.8128 8.25781 12.3594C8.25781 11.0024 9.36173 9.89844 10.7188 9.89844C12.0758 9.89844 13.1797 11.0024 13.1797 12.3594C13.1797 14 12.0878 14.8187 11.2106 15.4764C10.7247 15.8411 10.3786 16.1328 10.1589 16.4609H12.3594C12.8128 16.4609 13.1797 16.8278 13.1797 17.2812C13.1797 17.7347 12.8128 18.1016 12.3594 18.1016H9.07812C8.62471 18.1016 8.25781 17.7347 8.25781 17.2812C8.25781 15.6406 9.3497 14.8219 10.2269 14.1642C11.0649 13.5354 11.5391 13.1412 11.5391 12.3594C11.5391 11.9067 11.1714 11.5391 10.7188 11.5391Z" fill="currentColor"/>
                               </svg>
                            </div>
+
                            <div className="tp-feature-list__content">
                               <h4>24/7 hours support</h4>
                               <p>At collax we specialize in designing, building, <br/> shipping and scaling beautifu.</p>
                            </div>
-                        </div>
+
+                        </motion.div>
                      </div>
                   </div>
                </div>

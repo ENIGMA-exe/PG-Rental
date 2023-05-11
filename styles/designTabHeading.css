@@ -15,11 +15,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #6f726f;
+    /* color: #6f726f; */
+    color: #212529;
     background-size: auto auto;
     background-repeat: no-repeat;
     object-fit: cover;
     background-color: #f6f6f6;
+    font-family: 'Beyond Infinity',sans-serif;
     /* border: 1px solid black; */
 }
 .designtab-heading .myheading{
@@ -43,6 +45,7 @@
     align-items: center;
     justify-content: space-evenly;
     position: relative;
+    color: gray;
     /* border: 1px solid black; */
 }
 .designtab-heading .myheading h1 svg{
@@ -50,7 +53,7 @@
     z-index: -1;
     position: absolute;
 }
-.designtab-heading .myheading span{
+.designtab-heading .myheading .span{
     margin-left: 1%;
     color: #25645d;
     /* border: 1px solid black; */
@@ -70,6 +73,14 @@
 @media only screen and (max-width:1068px){
     .designtab-heading p{
         max-width: 70%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .designtab-heading .myheading{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
     }
 }
 

@@ -65,12 +65,49 @@ const SingleListings = ({ images }) => {
   })
 
   const handleActive = (e)=>{
-    
+    var num = Number(e.target.id)
+
     setactiveBtn((ps)=>{
       var prevState = {...ps}
       for(var key in prevState) prevState[key] = false;
       prevState[e.target.id] = true
       return prevState
+    })
+
+    setActiveImg((prevState)=>{
+      var data = {...prevState}
+
+      switch(num){
+        case 0:
+          for(var key in data) data[key] = true;
+          return data;
+        case 1:
+          for(var key in data) data[key] = false;
+          data[0] = true
+          return data
+
+        case 1:
+          for(var key in data) data[key] = false;
+          data[0] = true;
+          data[1] = true
+          return data
+
+        case 2:
+          case 1:
+          for(var key in data) data[key] = false;
+          data[2] = true
+          data[3] = true
+          return data
+
+        case 3:
+          for(var key in data) data[key] = false;
+          data[3] = true
+          data[4] = true
+          return data
+        
+        default:
+          return data
+      }
     })
   }
 
@@ -245,49 +282,67 @@ const SingleListings = ({ images }) => {
                     </div>
                 
                     <div class="col-xl-8 col-lg-8 col-md-12 grid-item  cat2 cat5 cat4">
+                      {
+                        (activeImg[0]) &&
                         <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Branding" data-title="Book art design" data-fx="1">
                           <div class="tp-project-item-four__img fix">
                               <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
                           </div>
                         </div>
+                      }
                     </div>
 
                     <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
+                      {
+                        (activeImg[1]) &&
                         <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Graphic Design" data-fx="1">
                           <div class="tp-project-item-four__img fix">
                               <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
                           </div>
                         </div>
-
+                      }
+                      {
+                        (activeImg[2]) &&
                         <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Graphic Design" data-fx="1">
                           <div class="tp-project-item-four__img fix">
                               <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
                           </div>
                         </div>
+                      }
+                    </div>
+                      
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
+                        {
+                          (activeImg[3]) &&
+                          <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="3d Digital Art" data-fx="1">
+                            <div class="tp-project-item-four__img fix">
+                                <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                            </div>
+                          </div>
+                        }
                     </div>
 
                     <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
-                        <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="3d Digital Art" data-fx="1">
-                          <div class="tp-project-item-four__img fix">
-                              <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                        {
+                          (activeImg[4]) &&
+                          <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Web Design" data-fx="1">
+                            <div class="tp-project-item-four__img fix">
+                                <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                            </div>
                           </div>
-                        </div>
+                        }
                     </div>
 
                     <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
-                        <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Web Design" data-fx="1">
-                          <div class="tp-project-item-four__img fix">
-                              <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                        {
+                          (activeImg[5]) &&
+                          <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Mobile App Design" data-fx="1">
+                            <div class="tp-project-item-four__img fix">
+                                <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
+                            </div>
                           </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
-                        <div class="tp-project-item-four mb-30 tp-img-reveal-item" data-subtitle="Design" data-title="Mobile App Design" data-fx="1">
-                          <div class="tp-project-item-four__img fix">
-                              <a href="#"><img class="w-100" src="/images/gallery/gallery1.jpg" alt=""/></a>
-                          </div>
-                        </div>
+                        }
                     </div>
 
                   </div> 

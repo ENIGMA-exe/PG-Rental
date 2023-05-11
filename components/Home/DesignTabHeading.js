@@ -18,8 +18,12 @@ export default function DesignTabHeading({title,subtitle,span,reff,bool_reff,ani
                 <path d="M0 0L160 11H0V0Z" fill="#FFDC60" />
               </svg>
 
+              {/* <span>{span}</span>  */}
             </h1>
-            <span>{span}</span> 
+            <h1 className='span'>
+              {span}
+            </h1>
+            
             
           </motion.h1>
 

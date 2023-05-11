@@ -10,7 +10,7 @@ import Footer from "../components/_App/Footer";
 import DesignTabHeading from "../components/Home/DesignTabHeading";
 
 import AppDownload from '../components/Common/AppDownload';
-import Gallery from "../components/Home/Gallery";
+// import Gallery from "../components/Home/Gallery";
 import Features from "../components/Home/Features";
 
 import {motion,useAnimation} from 'framer-motion'
@@ -28,8 +28,6 @@ const Index = () => {
   const MH_2_animation = useAnimation();
 
   useEffect(()=>{
-
-    //console.log("index:-", mh_1_Inview)
 
     //for heading - 1
     if(mh_1_Inview){
@@ -70,34 +68,22 @@ const Index = () => {
 
   return (
     <>
-
-      
-
       <Banner />
+      {/* <Gallery/> */}
 
-      {/* <DesignTabHeading 
-        title={'Feel like Home with '}
-        span={"Zestos"}
-        subtitle="Memories are encoded through repetition"
-        reff={mh_1_ref}
-        bool_reff={mh_1_Inview}
-        animate={MH_1_animation}
-        />
-
-         <Gallery/> */}
-
-       <DesignTabHeading 
+      <DesignTabHeading 
         title={'The Dwelling Experience with'} span={"Zestos"}
         subtitle="Memories are encoded through repetition"
         reff={mh_2_ref}
         bool_reff={mh_2_Inview}
         animate={MH_2_animation}
-        />
+      />
       <Features/>
      
-     <EventsArea/>
+      <EventsArea/>
 
       <Appattachment/>
+
       <AppDownload />
       
       <HowItWorks bgColor="bg-f9f9f9O" />
@@ -108,5 +94,6 @@ const Index = () => {
     </>
   );
 };
+
 
 export default Index;

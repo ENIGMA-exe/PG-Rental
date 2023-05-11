@@ -1025,8 +1025,8 @@ Navbar Area CSS
   cursor: pointer;
   z-index: 9991;
   position: absolute;
-  right: 60px;
-  top: -34px;
+  right: 20px;
+  top: -50px;
 }
 
 .others-option-for-responsive .dot-menu .inner {
@@ -1060,7 +1060,7 @@ Navbar Area CSS
 .others-option-for-responsive .container .container {
   position: absolute;
   right: 0;
-  top: 15px;
+  top: -20px;
   max-width: 260px;
   margin-left: auto;
   opacity: 0;
@@ -1400,7 +1400,8 @@ Navbar Area CSS
   }
   .miran-responsive-nav .logo {
     position: relative;
-    width: 60%;
+    /* width: 60%; */
+    width: 15%;
     z-index: 999;
   }
   .miran-nav {
@@ -1935,6 +1936,7 @@ Main Banner Area CSS
 
 .banner-content form .submit-btn {
   padding-left: 5px;
+  margin: 1% 0;
 }
 
 .banner-content form .submit-btn button,
@@ -7337,15 +7339,16 @@ Places Area CSS
 Feedback Area CSS
 =================================================*/
 .feedback-area .container .section-title h2{
-  /* font-family: "Beyond Infinity",sans-serif; */
-  font-size: 3rem;
+  font-family: "Beyond Infinity",sans-serif;
+  font-size: 5rem;
   color: #808080;
   position: relative;
+  /* border: 1px solid white; */
 }
 .feedback-area .container .section-title h2 svg{
   position: absolute;
-  top: -10%;
-  left: 10%;
+  bottom: 0;
+  left: 5%;
   z-index: -1;
 }
 .feedback-area .container .section-title p{
@@ -7513,10 +7516,14 @@ Feedback Area CSS
 /*================================================
 How It Works Area CSS
 =================================================*/
+.how-it-works-area{
+  background-color: #fafafa;
+}
 .how-it-works-area .container .section-title h2{
-  /* font-family: "Beyond Infinity",sans-serif; */
-  font-size: 50px;
+  font-family: "Beyond Infinity",sans-serif;
+  font-size: 80px;
   color: gray;
+  /* color: #212529; */
   position: relative;
   /* border: 1px solid black; */
 }
@@ -7526,7 +7533,8 @@ How It Works Area CSS
 
 .how-it-works-area .container .section-title h2 svg{
   position: absolute;
-  top: -10%;
+  /* top: -10%; */
+  bottom: 0;
   left: 10%;
   z-index: -1;
 }
@@ -7613,10 +7621,12 @@ Events Area CSS
 }
 
 .tp-title-sm {
-    font-size: 40px;
+    font-size: 50px;
     letter-spacing: 0;
     font-weight: 600;
     letter-spacing: -1px;
+    color: gray;
+    font-family: 'Beyond Infinity',sans-serif;
 }
 
 .tp-feature-list {
